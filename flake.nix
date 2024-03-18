@@ -31,7 +31,7 @@
               nix = "${getExe final.nix}";
               nixos-rebuild = "${getExe final.nixos-rebuild}";
               openssh = "${getExe final.openssh}";
-              flock = "${getExe final.flock}";
+              flock = "${final.flock}/bin/flock";
 
               n = flake.nixosConfigurations.${machine}._module.args.nixinate;
               hermetic = n.hermetic or true;
